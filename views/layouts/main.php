@@ -6,7 +6,6 @@
  */
 
 use yii\helpers\Html;
-use rmrevin\yii\fontawesome\FA;
 
 $bundle = mirocow\gentelella\assets\Asset::register($this);
 
@@ -58,7 +57,6 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
 
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-
                     <div class="menu_section">
                         <h3>General</h3>
                         <?=
@@ -131,7 +129,6 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
                         )
                         ?>
                     </div>
-
                 </div>
                 <!-- /sidebar menu -->
 
@@ -151,6 +148,7 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
                     </a>
                 </div>
                 <!-- /menu footer buttons -->
+
             </div>
         </div>
 
@@ -163,6 +161,7 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
 
+                    <!-- navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -170,7 +169,7 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="javascript:;">  Profile</a>
+                                <li><a href="javascript:;"> Profile</a>
                                 </li>
                                 <li>
                                     <a href="javascript:;">
@@ -194,58 +193,30 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>
-                      <span class="image">
-                                        <img src="http://placehold.it/128x128" alt="Profile Image" />
-                                    </span>
-                      <span>
-                                        <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                      </span>
-                      <span class="message">
-                                        Film festivals used to be do-or-die moments for movie makers. They were where...
-                                    </span>
+                                        <span class="image">
+                                            <img src="http://placehold.it/128x128" alt="Profile Image"/>
+                                        </span>
+                                        <span>
+                                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a>
-                      <span class="image">
-                                        <img src="http://placehold.it/128x128" alt="Profile Image" />
-                                    </span>
-                      <span>
-                                        <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                      </span>
-                      <span class="message">
-                                        Film festivals used to be do-or-die moments for movie makers. They were where...
-                                    </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                      <span class="image">
-                                        <img src="http://placehold.it/128x128" alt="Profile Image" />
-                                    </span>
-                      <span>
-                                        <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                      </span>
-                      <span class="message">
-                                        Film festivals used to be do-or-die moments for movie makers. They were where...
-                                    </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                      <span class="image">
-                                        <img src="http://placehold.it/128x128" alt="Profile Image" />
-                                    </span>
-                      <span>
-                                        <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                      </span>
-                      <span class="message">
-                                        Film festivals used to be do-or-die moments for movie makers. They were where...
-                                    </span>
+                                        <span class="image">
+                                            <img src="http://placehold.it/128x128" alt="Profile Image"/>
+                                        </span>
+                                        <span>
+                                            <span>John Smith</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -268,6 +239,7 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
 
         <!-- page content -->
         <div class="right_col" role="main">
+
             <?php if (isset($this->params['h1'])): ?>
                 <div class="page-title">
                     <div class="title_left">
@@ -290,11 +262,11 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
             <?= $content ?>
         </div>
         <!-- /page content -->
+
         <!-- footer content -->
         <footer>
             <div class="pull-right">
                 Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com" rel="nofollow" target="_blank">Colorlib</a><br />
-                Extension for Yii framework 2 by <a href="http://yiister.ru" rel="nofollow" target="_blank">Yiister</a>
             </div>
             <div class="clearfix"></div>
         </footer>
