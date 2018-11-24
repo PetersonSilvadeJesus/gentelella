@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  */
 class AnimateCssAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/gentelella-rtl/vendors/animate.css/';
+    public $sourcePath = '@npm/gentelella/vendors/animate.css/';
     public $css = [
         'animate.min.css'
     ];
