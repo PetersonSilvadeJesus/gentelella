@@ -7,7 +7,7 @@
  *       return [
  *           'error' => [
  *               'class' => 'yii\web\ErrorAction',
- *               'view' => '@mortezakarimi/gentelella/views/error',
+ *               'view' => '@mirocow/gentelella/views/error',
  *           ],
  *       ];
  *   }`
