@@ -36,7 +36,7 @@ class Generator extends \yii\gii\Generator
     public $controllerClass;
     public $viewPath;
     public $baseControllerClass = 'yii\web\Controller';
-    public $indexWidgetType = 'datatable';
+    public $indexWidgetType = 'grid_extendet';
     public $searchModelClass = '';
     /**
      * @var bool whether to wrap the `GridView` or `ListView` widget with the `yii\widgets\Pjax` widget
@@ -55,7 +55,7 @@ class Generator extends \yii\gii\Generator
      */
     public function getName()
     {
-        return 'Gentelella CRUD Generator';
+        return 'CRUD Generator (theme Gentelella)';
     }
 
     /**
@@ -82,7 +82,7 @@ class Generator extends \yii\gii\Generator
             [['controllerClass'], 'match', 'pattern' => '/Controller$/', 'message' => 'Controller class name must be suffixed with "Controller".'],
             [['controllerClass'], 'match', 'pattern' => '/(^|\\\\)[A-Z][^\\\\]+Controller$/', 'message' => 'Controller class name must start with an uppercase letter.'],
             [['controllerClass', 'searchModelClass'], 'validateNewClass'],
-            [['indexWidgetType'], 'in', 'range' => ['datatable', 'grid', 'list']],
+            [['indexWidgetType'], 'in', 'range' => ['grid_extended', 'datatable', 'grid', 'list']],
             [['modelClass'], 'validateModelClass'],
             [['enableI18N', 'enablePjax', 'enablePageTitle'], 'boolean'],
             [['messageCategory'], 'validateMessageCategory', 'skipOnEmpty' => false],

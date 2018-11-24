@@ -15,6 +15,9 @@ echo "<?php\n";
 use yii\helpers\Html;
 use mirocow\gentelella\widgets\Panel;
 use <?php switch ($generator->indexWidgetType) {
+    case 'grid_extended':
+        echo "bupy7\\grid\\GridView";
+    break;
     case 'datatable':
         echo "mortezakarimi\\gentelella\\widgets\\grid\\GridView";
         break;

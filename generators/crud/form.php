@@ -9,6 +9,7 @@ echo $form->field($generator, 'controllerClass');
 echo $form->field($generator, 'viewPath');
 echo $form->field($generator, 'baseControllerClass');
 echo $form->field($generator, 'indexWidgetType')->dropDownList([
+    'grid_extended' => 'GridView extended',
     'datatable' => 'DataTable GridView',
     'grid' => 'GridView',
     'list' => 'ListView'
