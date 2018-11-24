@@ -8,12 +8,12 @@
 use yii\helpers\Html;
 use rmrevin\yii\fontawesome\FA;
 
-$bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
+$bundle = mirocow\gentelella\assets\Asset::register($this);
 
 ?>
 <?php $this->beginPage(); ?>
     <!DOCTYPE html>
-    <html lang="<?= Yii::$app->language ?>" dir="rtl">
+    <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta charset="<?= Yii::$app->charset ?>"/>
@@ -59,7 +59,7 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
                         <div class="menu_section">
                             <h3>عمومی</h3>
                             <?=
-                            mortezakarimi\gentelellartl\widgets\Menu::widget(
+                            mirocow\gentelella\widgets\Menu::widget(
                                 [
                                     "items" => [
                                         ["label" => 'خانه', "url" => "/", "icon" => "home"],

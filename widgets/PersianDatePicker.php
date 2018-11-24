@@ -1,6 +1,6 @@
 <?php
 
-namespace mortezakarimi\gentelellartl\widgets;
+namespace mirocow\gentelella\widgets;
 
 use Yii;
 use yii\base\Exception;
@@ -11,7 +11,7 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\JsExpression;
 use yii\widgets\InputWidget;
-use mortezakarimi\gentelellartl\assets\PersianDatePickerAsset;
+use mirocow\gentelella\assets\PersianDatePickerAsset;
 
 class PersianDatePicker extends InputWidget
 {
@@ -125,7 +125,7 @@ class PersianDatePicker extends InputWidget
     public function registerAssetBundle()
     {
         $view = $this->getView();
-        \mortezakarimi\gentelellartl\assets\PersianDatePickerAsset::register($view);
+        \mirocow\gentelella\assets\PersianDatePickerAsset::register($view);
         $initDate = null;
         if (!empty($this->initDateValue)) {
             $initDate = Yii::$app->formatter->asTimestamp($this->initDateValue);

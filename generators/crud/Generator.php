@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace mortezakarimi\gentelellartl\generators\crud;
+namespace mirocow\gentelella\generators\crud;
 
 use Yii;
 use yii\db\ActiveRecord;
@@ -55,7 +55,7 @@ class Generator extends \yii\gii\Generator
      */
     public function getName()
     {
-        return 'Gentelella-rtl CRUD Generator';
+        return 'Gentelella CRUD Generator';
     }
 
     /**
@@ -64,7 +64,7 @@ class Generator extends \yii\gii\Generator
     public function getDescription()
     {
         return 'This generator generates a controller and views that implement CRUD (Create, Read, Update, Delete)
-            operations for the specified data model based on <code>gentelella-rtl</code> template.';
+            operations for the specified data model based on <code>gentelella</code> template.';
     }
 
     /**
@@ -131,7 +131,7 @@ class Generator extends \yii\gii\Generator
             'enablePjax' => 'This indicates whether the generator should wrap the <code>GridView</code> or <code>ListView</code>
                 widget on the index page with <code>yii\widgets\Pjax</code> widget. Set this to <code>true</code> if you want to get
                 sorting, filtering and pagination without page refreshing.',
-            'enablePageTitle' => 'This indicates whether the generator should Gentelella-rtl page title to pages or not. Set this to <code>true</code> if you want to add page title section html to your pages.',
+            'enablePageTitle' => 'This indicates whether the generator should Gentelella page title to pages or not. Set this to <code>true</code> if you want to add page title section html to your pages.',
         ]);
     }
 

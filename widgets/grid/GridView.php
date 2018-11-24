@@ -5,7 +5,7 @@
  * @link http://gentelella.yiister.ru
  */
 
-namespace mortezakarimi\gentelellartl\widgets\grid;
+namespace mirocow\gentelella\widgets\grid;
 
 use yii\helpers\Html;
 
@@ -14,7 +14,7 @@ class GridView extends \yii\grid\GridView
     /**
      * @inheritdoc
      */
-    public $dataColumnClass = 'mortezakarimi\gentelellartl\widgets\grid\DataColumn';
+    public $dataColumnClass = 'mirocow\gentelella\widgets\grid\DataColumn';
 
     /**
      * @inheritdoc

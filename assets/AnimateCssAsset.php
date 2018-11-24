@@ -1,6 +1,6 @@
 <?php
 
-namespace mortezakarimi\gentelellartl\assets;
+namespace mirocow\gentelella\assets;
 
 use yii\web\AssetBundle;
 

@@ -5,13 +5,13 @@
  * @link http://gentelella.yiister.ru
  */
 
-namespace mortezakarimi\gentelellartl\assets;
+namespace mirocow\gentelella\assets;
 
 use yii\web\AssetBundle;
 
 class ExtensionAsset extends AssetBundle
 {
-    public $sourcePath = '@mortezakarimi/gentelellartl/assets/src';
+    public $sourcePath = '@mortezakarimi/gentelella/assets/src';
     public $js = [
         'js/extension.js',
     ];

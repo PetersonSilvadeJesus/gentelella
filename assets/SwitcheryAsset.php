@@ -1,6 +1,6 @@
 <?php
 
-namespace mortezakarimi\gentelellartl\assets;
+namespace mirocow\gentelella\assets;
 
 use yii\web\AssetBundle;
 
@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  */
 class SwitcheryAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/gentelella-rtl/vendors/switchery/dist/';
+    public $sourcePath = '@npm/gentelella/vendors/switchery/dist/';
     public $css = [
         'switchery.min.css'
     ];

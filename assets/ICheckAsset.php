@@ -1,6 +1,6 @@
 <?php
 
-namespace mortezakarimi\gentelellartl\assets;
+namespace mirocow\gentelella\assets;
 
 use yii\web\AssetBundle;
 
@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  */
 class ICheckAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/gentelella-rtl/vendors/iCheck/';
+    public $sourcePath = '@npm/gentelella/vendors/iCheck/';
     public $css = [
         'skins/flat/green.css'
     ];

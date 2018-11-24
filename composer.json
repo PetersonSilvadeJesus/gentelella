@@ -1,5 +1,5 @@
 {
-  "name": "mortezakarimi/yii2-gentelella",
+  "name": "mirocow/yii2-gentelella",
   "description": "It is a free admin template for backend of yii framework 2 based on gentelella theme.",
   "type": "yii2-extension",
   "keywords": [
@@ -39,7 +39,7 @@
   },
   "autoload": {
     "psr-4": {
-      "mortezakarimi\\gentelellartl\\": ""
+      "mirocow\\gentelella\\": ""
     }
   },
   "repositories": [

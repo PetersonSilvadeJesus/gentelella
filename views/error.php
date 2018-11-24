@@ -7,7 +7,7 @@
  *       return [
  *           'error' => [
  *               'class' => 'yii\web\ErrorAction',
- *               'view' => '@mortezakarimi/gentelellartl/views/error',
+ *               'view' => '@mortezakarimi/gentelella/views/error',
  *           ],
  *       ];
  *   }`
@@ -24,9 +24,9 @@
 
 use yii\helpers\Html;
 use rmrevin\yii\fontawesome\FA;
-use mortezakarimi\gentelellartl\widgets\Panel;
+use mirocow\gentelella\widgets\Panel;
 
-$bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
+$bundle = mirocow\gentelella\assets\Asset::register($this);
 
 $this->title = $name;
 ?>
@@ -51,7 +51,7 @@ $this->title = $name;
     $this->context->layout = false;
     $this->beginPage(); ?>
     <!DOCTYPE html>
-    <html lang="<?= Yii::$app->language ?>" dir="rtl">
+    <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta charset="<?= Yii::$app->charset ?>"/>

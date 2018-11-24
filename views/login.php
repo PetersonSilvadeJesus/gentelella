@@ -11,12 +11,12 @@ use rmrevin\yii\fontawesome\FA;
 use yii\bootstrap\ActiveForm;
 use app\models\LoginForm;
 
-\mortezakarimi\gentelellartl\assets\AnimateCssAsset::register($this);
-$bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
+\mirocow\gentelella\assets\AnimateCssAsset::register($this);
+$bundle = mirocow\gentelella\assets\Asset::register($this);
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>" dir="rtl">
+<html lang="<?= Yii::$app->language ?>">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta charset="<?= Yii::$app->charset ?>"/>

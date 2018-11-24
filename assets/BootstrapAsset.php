@@ -1,17 +1,17 @@
 <?php
 
-namespace mortezakarimi\gentelellartl\assets;
+namespace mirocow\gentelella\assets;
 
 use yii\web\AssetBundle;
 
 /**
  * @author Morteza Karimi <mortezak1373@gmail.com>
  */
-class BootstrapRTLAsset extends AssetBundle
+class BootstrapAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/bootstrap-rtl/dist';
+    public $sourcePath = '@bower/bootstrap/dist';
     public $css = [
-        'css/bootstrap-rtl.min.css'
+        'css/bootstrap.min.css'
     ];
     public $js = [
     ];

@@ -4,7 +4,7 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
-/* @var $generator mortezakarimi\gentelellartl\generators\crud\Generator */
+/* @var $generator mirocow\gentelella\generators\crud\Generator */
 
 $urlParams = $generator->generateUrlParams();
 $nameAttribute = $generator->getNameAttribute();
@@ -13,10 +13,10 @@ echo "<?php\n";
 ?>
 
 use yii\helpers\Html;
-use mortezakarimi\gentelellartl\widgets\Panel;
+use mirocow\gentelella\widgets\Panel;
 use <?php switch ($generator->indexWidgetType) {
     case 'datatable':
-        echo "mortezakarimi\\gentelellartl\\widgets\\grid\\GridView";
+        echo "mortezakarimi\\gentelella\\widgets\\grid\\GridView";
         break;
     case 'grid':
         echo "yii\\grid\\GridView";

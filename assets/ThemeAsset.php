@@ -5,7 +5,7 @@
  * @link http://gentelella.yiister.ru
  */
 
-namespace mortezakarimi\gentelellartl\assets;
+namespace mirocow\gentelella\assets;
 
 use yii\web\AssetBundle;
 
@@ -14,9 +14,9 @@ class ThemeAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-        'mortezakarimi\gentelellartl\assets\BootstrapRTLAsset',
+        'mirocow\gentelella\assets\BootstrapAsset',
         'rmrevin\yii\fontawesome\AssetBundle',
-        'mortezakarimi\gentelellartl\assets\BootstrapProgressbar',
-        'mortezakarimi\gentelellartl\assets\ThemeBuildAsset'
+        'mirocow\gentelella\assets\BootstrapProgressbar',
+        'mirocow\gentelella\assets\ThemeBuildAsset'
     ];
 }

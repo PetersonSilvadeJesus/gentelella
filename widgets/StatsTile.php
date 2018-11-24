@@ -5,7 +5,7 @@
  * @link http://gentelella.yiister.ru
  */
 
-namespace mortezakarimi\gentelellartl\widgets;
+namespace mirocow\gentelella\widgets;
 
 use rmrevin\yii\fontawesome\component\Icon;
 use yii\base\Widget;
