@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  */
 class SwitcheryAsset extends AssetBundle
 {
-    public $sourcePath = '@npm/gentelella/vendors/switchery/dist/';
+    public $sourcePath = '@bower/gentelella/vendors/switchery/dist/';
     public $css = [
         'switchery.min.css'
     ];

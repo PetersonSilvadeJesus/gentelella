@@ -55,7 +55,7 @@ class Menu extends \yii\widgets\Menu
         $renderedItem = parent::renderItem($item);
         if (isset($item['badge'])) {
             $badgeOptions = ArrayHelper::getValue($item, 'badgeOptions', []);
-            Html::addCssClass($badgeOptions, 'label pull-left');
+            Html::addCssClass($badgeOptions, 'label pull-right');
         } else {
             $badgeOptions = null;
         }
