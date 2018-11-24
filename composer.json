@@ -36,7 +36,7 @@
     "yiister/yii2-advanced-grid": "~1.0",
     "rmrevin/yii2-fontawesome": "~2.0",
     "bower-asset/persian-datepicker": "^1.1",
-    "bower-asset/gentelella": "dev-master"
+    "bower-asset/gentelella": "*"
   },
   "autoload": {
     "psr-4": {
