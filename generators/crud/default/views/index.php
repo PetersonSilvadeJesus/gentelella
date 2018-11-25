@@ -39,8 +39,8 @@ $this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::ca
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-index">
-    <?php if ($generator->enablePageTitle) { ?>
-        <div class="page-title">
+<?php if ($generator->enablePageTitle): ?>
+    <div class="page-title">
         <div class="title_left">
             <h3><?= "<?= " ?>Html::encode($this->title) ?></h3>
         </div>
@@ -55,8 +55,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
         </div>
-<div class="clearfix"></div>
-        </div><?php } ?>
+        <div class="clearfix"></div>
+    </div>
+<?php endif; ?>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
 <?php if ($generator->enablePanel):?>

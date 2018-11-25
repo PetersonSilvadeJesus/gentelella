@@ -29,7 +29,8 @@ $this->params['breadcrumbs'][] = ['label' => $model-><?= $generator->getNameAttr
 $this->params['breadcrumbs'][] = <?= $generator->generateString('Update') ?>;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update">
-    <?php if ($generator->enablePageTitle) { ?><div class="page-title">
+<?php if ($generator->enablePageTitle) :?>
+    <div class="page-title">
         <div class="title_left">
             <h3><?= "<?= " ?>Html::encode($this->title) ?></h3>
         </div>
@@ -44,8 +45,9 @@ $this->params['breadcrumbs'][] = <?= $generator->generateString('Update') ?>;
                 </div>
             </div>
         </div>
-    </div><?php }?>
-<div class="clearfix"></div>
+    </div>
+<?php endif;?>
+    <div class="clearfix"></div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <?php if ($generator->enablePanel):?>
