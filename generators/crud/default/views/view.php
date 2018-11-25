@@ -13,7 +13,9 @@ echo "<?php\n";
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+<?php if ($generator->enablePanel):?>
 use mirocow\gentelella\widgets\Panel;
+<?php endif;?>
 
 /* @var $this yii\web\View */
 /* @var $model <?= ltrim($generator->modelClass, '\\') ?> */
@@ -39,46 +41,47 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
         </div><?php } ?>
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
     <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <?php echo "<?php" ?> Panel::begin([
+    <div class="col-md-12 col-sm-12 col-xs-12">
+            <?php if ($generator->enablePanel):?>
+<?php echo "<?php" ?> Panel::begin([
             'header' => Html::encode($this->title),
             'icon' => 'eye',
             ]) ?>
+            <?php endif;?>
 
-            <p>
-                <?= "<?= " ?>Html::a(<?= $generator->generateString('Update') ?>, ['update', <?= $urlParams ?>],
-                ['class' => 'btn btn-primary']) ?>
-                <?= "<?= " ?>Html::a(<?= $generator->generateString('Delete') ?>, ['delete', <?= $urlParams ?>], [
+        <p>
+            <?= "<?= " ?>Html::a(<?= $generator->generateString('Update') ?>, ['update', <?= $urlParams ?>], ['class' => 'btn btn-primary']) ?>
+            <?= "<?= " ?>Html::a(<?= $generator->generateString('Delete') ?>, ['delete', <?= $urlParams ?>], [
                 'class' => 'btn btn-danger',
                 'data' => [
-                'confirm' =>
-                Yii::t('yii',<?= $generator->generateString('Are you sure you want to delete this item?') ?>)
-                ,
-                'method' => 'post',
+                    'confirm' => <?= $generator->generateString('Are you sure you want to delete this item?') ?>,
+                    'method' => 'post',
                 ],
-                ]) ?>
-            </p>
+            ]) ?>
+        </p>
 
-            <?= "<?= " ?>DetailView::widget([
+        <?= "<?= " ?>DetailView::widget([
             'model' => $model,
             'attributes' => [
-            <?php
-            if (($tableSchema = $generator->getTableSchema()) === false) {
-                foreach ($generator->getColumnNames() as $name) {
-                    echo "            '" . $name . "',\n";
-                }
-            } else {
-                foreach ($generator->getTableSchema()->columns as $column) {
-                    $format = $generator->generateColumnFormat($column);
-                    echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
-                }
-            }
-            ?>
+<?php
+if (($tableSchema = $generator->getTableSchema()) === false) {
+    foreach ($generator->getColumnNames() as $name) {
+        echo "                '" . $name . "',\n";
+    }
+} else {
+    foreach ($generator->getTableSchema()->columns as $column) {
+        $format = $generator->generateColumnFormat($column);
+        echo "                '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+    }
+}
+?>
             ],
-            ]) ?>
-            <?php echo "<?php" ?> Panel::end() ?>
-        </div>
+        ]) ?>
+
+<?php if ($generator->enablePanel):?>
+<?php echo "<?php" ?> Panel::end() ?><?php endif;?>
+    </div>
     </div>
 </div>

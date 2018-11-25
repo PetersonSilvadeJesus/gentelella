@@ -13,7 +13,9 @@ echo "<?php\n";
 ?>
 
 use yii\helpers\Html;
+<?php if ($generator->enablePanel):?>
 use mirocow\gentelella\widgets\Panel;
+<?php endif;?>
 use <?php switch ($generator->indexWidgetType) {
     case 'grid_extended':
         echo "bupy7\\grid\\GridView";
@@ -53,14 +55,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
         </div>
-        <div class="clearfix"></div>
+<div class="clearfix"></div>
         </div><?php } ?>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <?php echo "<?php" ?> Panel::begin([
+<?php if ($generator->enablePanel):?>
+<?php echo "<?php" ?> Panel::begin([
             'header' => Html::encode($this->title),
             'icon' => 'list-ul',
             ]) ?>
+<?php endif;?>
 <?= $generator->enablePjax ? "\t\t<?php Pjax::begin(); ?>\n" : '' ?>
 <?php if (!empty($generator->searchModelClass)): ?>
 <?= "\t\t\t<?php " . ($generator->indexWidgetType === 'list' ? "" : "// ") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -69,45 +73,47 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= "<?= " ?>Html::a(<?= $generator->generateString('Create ' . Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>, ['create'], ['class' => 'btn btn-success']) ?>
             </p>
             <?php if ($generator->indexWidgetType === 'list'): ?>
-            <?= "<?= " ?>ListView::widget([
-            'dataProvider' => $dataProvider,
-            'itemOptions' => ['class' => 'item'],
-            'itemView' => function ($model, $key, $index, $widget) {
+    <?= "<?= " ?>ListView::widget([
+        'dataProvider' => $dataProvider,
+        'itemOptions' => ['class' => 'item'],
+        'itemView' => function ($model, $key, $index, $widget) {
             return Html::a(Html::encode($model-><?= $nameAttribute ?>), ['view', <?= $urlParams ?>]);
-            },
-            ]) ?>
+        },
+    ]) ?>
         <?php else: ?>
 <?= "<?= " ?>GridView::widget([
                 'dataProvider' => $dataProvider,
-                <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n\t\t\t\t\t'columns' => [\n\t\t" : "'columns' => [\n\t\t"; ?>
+                <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n\t\t\t\t'columns' => [\n\t\t" : "'columns' => [\n\t\t"; ?>
             ['class' => 'yii\grid\SerialColumn'],
 <?php
-            $count = 0;
-            if (($tableSchema = $generator->getTableSchema()) === false) {
-                foreach ($generator->getColumnNames() as $name) {
-                    if (++$count < 6) {
-                        echo "\t\t\t\t\t\t'" . $name . "',\n";
-                    } else {
-                        echo "\t\t\t\t\t\t//'" . $name . "',\n";
-                    }
-                }
-            } else {
-                foreach ($tableSchema->columns as $column) {
-                    $format = $generator->generateColumnFormat($column);
-                    if (++$count < 6) {
-                        echo "\t\t\t\t\t\t'" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
-                    } else {
-                        echo "\t\t\t\t\t\t//'" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
-                    }
-                }
-            }
-            ?>
+$count = 0;
+if (($tableSchema = $generator->getTableSchema()) === false) {
+    foreach ($generator->getColumnNames() as $name) {
+        if (++$count < 6) {
+            echo "\n\t\t\t\t\t\t" . $name . "',\n";
+        } else {
+            echo "\n\t\t\t\t\t\t//'" . $name . "',\n";
+        }
+    }
+} else {
+    foreach ($tableSchema->columns as $column) {
+        $format = $generator->generateColumnFormat($column);
+        if (++$count < 6) {
+            echo "\n\t\t\t\t\t\t'" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+        } else {
+            echo "\n\t\t\t\t\t\t//'" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+        }
+    }
+}
+?>
+
                     ['class' => 'yii\grid\ActionColumn'],
-                    ],
-                ]); ?>
+                ],
+            ]); ?>
         <?php endif; ?>
 <?= $generator->enablePjax ? "\t<?php Pjax::end(); ?>\n" : '' ?>
-            <?php echo "<?php" ?> Panel::end() ?>
+<?php if ($generator->enablePanel):?>
+<?php echo "<?php" ?> Panel::end() ?><?php endif;?>
         </div>
     </div>
 </div>

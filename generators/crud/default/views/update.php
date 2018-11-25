@@ -12,7 +12,9 @@ echo "<?php\n";
 ?>
 
 use yii\helpers\Html;
+<?php if ($generator->enablePanel):?>
 use mirocow\gentelella\widgets\Panel;
+<?php endif;?>
 
 /* @var $this yii\web\View */
 /* @var $model <?= ltrim($generator->modelClass, '\\') ?> */
@@ -43,17 +45,20 @@ $this->params['breadcrumbs'][] = <?= $generator->generateString('Update') ?>;
             </div>
         </div>
     </div><?php }?>
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <?php echo "<?php" ?> Panel::begin([
+            <?php if ($generator->enablePanel):?>
+<?php echo "<?php" ?> Panel::begin([
             'header' => Html::encode($this->title),
             'icon' => 'pencil-square-o',
             ]) ?>
-            <?= "<?= " ?>$this->render('_form', [
+            <?php endif;?>
+<?= "<?= " ?>$this->render('_form', [
             'model' => $model,
             ]) ?>
-            <?php echo "<?php" ?> Panel::end() ?>
+<?php if ($generator->enablePanel):?>
+<?php echo "<?php" ?> Panel::end() ?><?php endif;?>
         </div>
     </div>
 </div>

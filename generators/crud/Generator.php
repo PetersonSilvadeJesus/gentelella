@@ -38,6 +38,7 @@ class Generator extends \yii\gii\Generator
     public $baseControllerClass = 'yii\web\Controller';
     public $indexWidgetType = 'grid_extendet';
     public $searchModelClass = '';
+
     /**
      * @var bool whether to wrap the `GridView` or `ListView` widget with the `yii\widgets\Pjax` widget
      * @since 2.0.5
@@ -45,10 +46,14 @@ class Generator extends \yii\gii\Generator
     public $enablePjax = false;
 
     /**
+     * @var bool
+     */
+    public $enablePanel = false;
+
+    /**
      * @var bool whether to add page title section to pages or not
      */
     public $enablePageTitle = false;
-
 
     /**
      * {@inheritdoc}
@@ -84,7 +89,7 @@ class Generator extends \yii\gii\Generator
             [['controllerClass', 'searchModelClass'], 'validateNewClass'],
             [['indexWidgetType'], 'in', 'range' => ['grid_extended', 'datatable', 'grid', 'list']],
             [['modelClass'], 'validateModelClass'],
-            [['enableI18N', 'enablePjax', 'enablePageTitle'], 'boolean'],
+            [['enableI18N', 'enablePjax', 'enablePanel', 'enablePageTitle'], 'boolean'],
             [['messageCategory'], 'validateMessageCategory', 'skipOnEmpty' => false],
             ['viewPath', 'safe'],
         ]);
@@ -103,6 +108,7 @@ class Generator extends \yii\gii\Generator
             'indexWidgetType' => 'Widget Used in Index Page',
             'searchModelClass' => 'Search Model Class',
             'enablePjax' => 'Enable Pjax',
+            'enablePanel' => 'Enable Panel',
             'enablePageTitle ' => 'Enable Page Title'
         ]);
     }
@@ -131,6 +137,8 @@ class Generator extends \yii\gii\Generator
             'enablePjax' => 'This indicates whether the generator should wrap the <code>GridView</code> or <code>ListView</code>
                 widget on the index page with <code>yii\widgets\Pjax</code> widget. Set this to <code>true</code> if you want to get
                 sorting, filtering and pagination without page refreshing.',
+            'enablePanel' => 'This indicates whether the generator should wrap the <code>GridView</code> or <code>ListView</code>
+                widget on the index page with <code>yii\widgets\Panel</code> widget.',
             'enablePageTitle' => 'This indicates whether the generator should Gentelella page title to pages or not. Set this to <code>true</code> if you want to add page title section html to your pages.',
         ]);
     }
