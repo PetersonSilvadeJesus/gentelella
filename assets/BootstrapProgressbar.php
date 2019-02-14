@@ -5,7 +5,7 @@
  * @link http://gentelella.yiister.ru
  */
 
-namespace mirocow\gentelella\assets;
+namespace petersonsilva\gentelella\assets;
 
 use yii\web\AssetBundle;
 

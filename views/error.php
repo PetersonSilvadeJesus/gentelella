@@ -7,7 +7,7 @@
  *       return [
  *           'error' => [
  *               'class' => 'yii\web\ErrorAction',
- *               'view' => '@mirocow/gentelella/views/error',
+ *               'view' => '@petersonsilva/gentelella/views/error',
  *           ],
  *       ];
  *   }`
@@ -24,9 +24,9 @@
 
 use yii\helpers\Html;
 use rmrevin\yii\fontawesome\FA;
-use mirocow\gentelella\widgets\Panel;
+use petersonsilva\gentelella\widgets\Panel;
 
-$bundle = mirocow\gentelella\assets\Asset::register($this);
+$bundle = petersonsilva\gentelella\assets\Asset::register($this);
 
 $this->title = $name;
 ?>

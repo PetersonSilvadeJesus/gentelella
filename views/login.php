@@ -11,8 +11,8 @@ use rmrevin\yii\fontawesome\FA;
 use yii\bootstrap\ActiveForm;
 use app\models\LoginForm;
 
-\mirocow\gentelella\assets\AnimateCssAsset::register($this);
-$bundle = mirocow\gentelella\assets\Asset::register($this);
+\petersonsilva\gentelella\assets\AnimateCssAsset::register($this);
+$bundle = petersonsilva\gentelella\assets\Asset::register($this);
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>

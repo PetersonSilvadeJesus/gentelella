@@ -5,7 +5,7 @@
  */
 
 // You must change it to use in your application
-namespace mirocow\gentelella\assets;
+namespace petersonsilva\gentelella\assets;
 
 use yii\web\AssetBundle;
 

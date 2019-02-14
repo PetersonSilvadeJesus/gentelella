@@ -7,7 +7,7 @@
 
 use yii\helpers\Html;
 
-$bundle = mirocow\gentelella\assets\Asset::register($this);
+$bundle = petersonsilva\gentelella\assets\Asset::register($this);
 
 ?>
 <?php $this->beginPage(); ?>
@@ -60,7 +60,7 @@ $bundle = mirocow\gentelella\assets\Asset::register($this);
                     <div class="menu_section">
                         <h3>General</h3>
                         <?=
-                            mirocow\gentelella\widgets\Menu::widget(
+                        petersonsilva\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
                                     ["label" => "Home", "url" => "/", "icon" => "home"],

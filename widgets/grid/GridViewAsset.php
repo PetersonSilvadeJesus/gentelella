@@ -5,7 +5,7 @@
  * @link http://gentelella.yiister.ru
  */
 
-namespace mirocow\gentelella\widgets\grid;
+namespace petersonsilva\gentelella\widgets\grid;
 
 class GridViewAsset extends \yii\web\AssetBundle
 {
@@ -15,6 +15,6 @@ class GridViewAsset extends \yii\web\AssetBundle
     ];
     public $js = [];
     public $depends = [
-        'mirocow\gentelella\assets\Asset',
+        'petersonsilva\gentelella\assets\Asset',
     ];
 }
