@@ -26,7 +26,7 @@
       "email": "mirocow@gmail.com",
       "role": "Creator",
       "homepage": "https://github.com/mirocow"
-    }    
+    }
   ],
   "require": {
     "php": ">=7.0.0",
@@ -43,16 +43,7 @@
       "petersonsilva\\gentelella\\": ""
     }
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/Mirocow/yii2-grid.git"
-    }
-  ],
+  "repositories": [],
   "extra": {
     "asset-installer-paths": {
       "npm-asset-library": "vendor/npm",
