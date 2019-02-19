@@ -15,6 +15,9 @@ class ExtensionAsset extends AssetBundle
     public $js = [
         'js/extension.js',
     ];
+    public $css = [
+        'css/required.css',
+    ];
     public $depends = [
         'yii\web\JqueryAsset',
     ];

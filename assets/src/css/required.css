@@ -1,0 +1,9 @@
+form div.required label.control-label:after {
+    content:' * ';
+    color:red;
+}
+
+.nav-tabs > li > a{
+    padding: 10px 8px;
+    font-size: 10px;
+}
